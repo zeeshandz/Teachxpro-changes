@@ -1,0 +1,2 @@
+[functions.linkedin-post-generator]
+verify_jwt = false

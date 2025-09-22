@@ -1,0 +1,129 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 98%;
+    --foreground: 0 0% 9%;
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 9%;
+    --border: 0 0% 89.8%;
+    --input: 0 0% 89.8%;
+    --ring: 0 0% 3.9%;
+  }
+
+  .dark {
+    --background: 0 0% 3.9%;
+    --foreground: 0 0% 98%;
+    --card: 0 0% 5.9%;
+    --card-foreground: 0 0% 98%;
+    --border: 0 0% 14.9%;
+    --input: 0 0% 14.9%;
+    --ring: 0 0% 83.1%;
+  }
+
+  body {
+    @apply antialiased bg-[hsl(var(--background))] text-[hsl(var(--foreground))] font-sans;
+  }
+
+  /* TipTap Editor Styles */
+  .ProseMirror {
+    @apply outline-none;
+  }
+
+  .ProseMirror p {
+    @apply mb-4;
+  }
+
+  .ProseMirror ul {
+    @apply list-disc pl-6 mb-4;
+  }
+
+  .ProseMirror ol {
+    @apply list-decimal pl-6 mb-4;
+  }
+
+  .ProseMirror strong {
+    @apply font-bold;
+  }
+
+  .ProseMirror em {
+    @apply italic;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-medium tracking-tight;
+  }
+
+  /* Hide scrollbar for Chrome, Safari and Opera */
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Hide scrollbar for IE, Edge and Firefox */
+  .no-scrollbar {
+    -ms-overflow-x: hidden; /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
+}
+
+@layer components {
+  .clay-nav {
+    @apply fixed top-0 left-0 right-0 z-50 backdrop-blur-xl bg-white/80 dark:bg-black/80 border-b border-neutral-200/50 dark:border-neutral-800/50;
+  }
+
+  .clay-container {
+    @apply max-w-[1400px] mx-auto px-6 sm:px-8;
+  }
+
+  .clay-button {
+    @apply inline-flex items-center justify-center rounded-full px-6 py-2.5 text-sm font-medium
+           transition-colors duration-300 
+           bg-neutral-900 text-white hover:bg-neutral-800
+           dark:bg-white dark:text-neutral-900 dark:hover:bg-neutral-200
+           disabled:opacity-50 disabled:pointer-events-none;
+  }
+
+  .clay-card {
+    @apply bg-white dark:bg-neutral-900 rounded-3xl border border-neutral-200/50 dark:border-neutral-800/50
+           shadow-sm hover:shadow-md transition-all duration-300;
+  }
+
+  .clay-heading {
+    @apply text-4xl sm:text-5xl lg:text-6xl font-medium tracking-tight;
+  }
+
+  .clay-text {
+    @apply text-neutral-600 dark:text-neutral-400;
+  }
+}
+
+/* Animations */
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+@layer utilities {
+  .perspective-\[1000px\] {
+    perspective: 1000px;
+  }
+  
+  .transform-style-3d {
+    transform-style: preserve-3d;
+  }
+  
+  .backface-hidden {
+    backface-visibility: hidden;
+  }
+  
+  .rotate-y-180 {
+    transform: rotateY(180deg);
+  }
+}

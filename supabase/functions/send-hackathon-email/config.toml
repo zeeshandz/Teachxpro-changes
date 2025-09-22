@@ -1,0 +1,2 @@
+[functions.send-hackathon-email]
+  verify_jwt = false
