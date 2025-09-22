@@ -88,7 +88,7 @@ function Home() {
               </motion.div>
 
               <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-clip-text text-[rgb(0,116,116)] bg-gradient-to-r from-gray-900 via-purple-900 to-violet-900 leading-[1.2] md:leading-[1.2]">
-                What We Do
+                What
               </h2>
               <p className="text-gray-600 text-lg max-w-2xl mx-auto leading-relaxed">
                 Empowering students and professionals with comprehensive learning and career development solutions
